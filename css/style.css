@@ -1,0 +1,50 @@
+/* myCSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+/* HEADER */
+/* NAV */
+.menu > li{
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 30px;
+}
+
+.menu a > span {
+  color: #808080;
+  font-size: 14px;
+}
+
+.menu a:hover > span {
+  color: #000;
+}
+
+/* Left - NAV */
+.left_nav {
+  text-transform: uppercase;
+}
+
+.logo img{
+  height: 25px;
+}
