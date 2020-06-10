@@ -25,6 +25,13 @@ body {
 
 /* HEADER */
 /* NAV */
+nav > * {
+  content: "";
+  display: table;
+  clear: both;
+  display: inline-block;
+}
+
 .menu > li{
   display: inline-block;
   vertical-align: middle;
@@ -47,4 +54,9 @@ body {
 
 .logo img{
   height: 25px;
+}
+
+/* rigth - Nav */
+.right_nav {
+  float: right;
 }
