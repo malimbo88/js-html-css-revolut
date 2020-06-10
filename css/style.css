@@ -32,28 +32,53 @@ nav > * {
   display: inline-block;
 }
 
-.menu > li {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 30px;
-}
-
-.menu > li:last-child {
-  margin: 0;
-}
-
+/* menu */
 .menu a > span {
   color: #808080;
   font-size: 14px;
 }
 
-.menu a > i {
-  color: #808080;
-  font-size: 8px;
-}
-
 .menu a:hover > span {
   color: #000;
+}
+
+/* menu inline */
+.menu.inline > li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+  position: relative;
+}
+
+.menu.inline > li:last-child {
+  margin: 0;
+}
+
+/* menu scroll */
+.menu.scroll {
+  background-color: yellow;
+  padding: 20px;
+  position: absolute;
+  top: 100%;
+  width: 500%;
+}
+
+.menu.scroll > li {
+  text-transform: capitalize;
+  padding-top: 20px;
+}
+
+.menu.scroll > li:first-child {
+  padding-top: 0;
+}
+
+.menu.scroll {
+  background-color: yellow;
+  padding: 20px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Left - NAV */
@@ -73,6 +98,11 @@ nav > * {
 
 .right_nav .lang {
   text-transform: uppercase;
+}
+
+.right_nav a > i {
+  color: #808080;
+  font-size: 8px;
 }
 
 .right_nav .push_link {
