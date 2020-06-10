@@ -33,12 +33,13 @@ nav > * {
 }
 
 /* menu */
-.menu a > span {
+.menu li span {
   color: #808080;
   font-size: 14px;
+  cursor: pointer;
 }
 
-.menu a:hover > span {
+.menu li span:hover {
   color: #000;
 }
 
@@ -55,12 +56,16 @@ nav > * {
 }
 
 /* menu scroll */
+.scroll {
+  display: none;
+}
+
 .menu.scroll {
-  background-color: yellow;
   padding: 20px;
   position: absolute;
   top: 100%;
-  width: 500%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .menu.scroll > li {
@@ -72,13 +77,24 @@ nav > * {
   padding-top: 0;
 }
 
-.menu.scroll {
-  background-color: yellow;
-  padding: 20px;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+/* utility class */
+.visible {
+  display: block;
+}
+
+/* conti menu-scroll */
+.menu.scroll.conti{
+  width: 300%;
+}
+
+/* azienda menu-scroll */
+.menu.scroll.azienda{
+  width: 300%;
+}
+
+/* aiuto menu-scroll */
+.menu.scroll.aiuto{
+  width: 500%;
 }
 
 /* Left - NAV */
