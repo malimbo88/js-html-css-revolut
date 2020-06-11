@@ -1,42 +1,56 @@
 /* myCSS */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-li {
-  list-style: none;
-}
+ img {
+   width: 100%;
+ }
 
-a {
-  text-decoration: none;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-.wrapper {
-  width: 1200px;
+/* General */
+.wrapper_general {
+  max-width: 1200px;
   margin: 0 auto;
-  margin-top: 80px;
+}
+
+.container_flex {
+  display: flex;
+}
+
+/* Utility */
+.current span {
+  color: #000;
+}
+
+.menu.scroll.visible {
+  display: block;
 }
 
 /* HEADER */
 /* NAV */
-nav > * {
-  content: "";
-  display: table;
-  clear: both;
-  display: inline-block;
+.wrapper_nav {
+  height: 40px;
+  width: 100%;
+  margin:40px 0;
+}
+
+nav > .container_flex {
+  justify-content: space-between;
 }
 
 /* menu */
-.menu li span {
-  color: #808080;
+.menu {
+  list-style-type: none;
+}
+
+.menu a {
+  font-family: 'Roboto', sans-serif;
+  color: #A0A6AD;
   font-size: 14px;
-  cursor: pointer;
+  text-decoration: none;
 }
 
 .menu li span:hover {
@@ -44,57 +58,47 @@ nav > * {
 }
 
 /* menu inline */
+.menu.inline {
+  line-height: 40px;
+}
+
 .menu.inline > li {
   display: inline-block;
-  vertical-align: middle;
   margin-right: 30px;
-  position: relative;
 }
 
 .menu.inline > li:last-child {
   margin: 0;
 }
 
+.menu .with_scroll {
+  position: relative;
+}
+
 /* menu scroll */
-.scroll {
+.menu.scroll {
+  padding: 0 20px;
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  line-height: normal;
   display: none;
 }
 
-.menu.scroll {
-  padding: 20px;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+.menu.scroll li {
+  margin: 15px 0;
 }
 
-.menu.scroll > li {
+.menu.scroll .sup_text {
+  font-size: 10px;
+  color: #ff0066;
   text-transform: capitalize;
-  padding-top: 20px;
-}
-
-.menu.scroll > li:first-child {
-  padding-top: 0;
-}
-
-/* utility class */
-.visible {
-  display: block;
-}
-
-/* conti menu-scroll */
-.menu.scroll.conti{
-  width: 300%;
-}
-
-/* azienda menu-scroll */
-.menu.scroll.azienda{
-  width: 300%;
-}
-
-/* aiuto menu-scroll */
-.menu.scroll.aiuto{
-  width: 500%;
+  font-weight: bold;
+  position: relative;
+  top: -10px;
+  left: 2px;
 }
 
 /* Left - NAV */
@@ -102,13 +106,16 @@ nav > * {
   text-transform: uppercase;
 }
 
-.logo img{
-  height: 25px;
+.logo {
+  width: 100px;
+}
+
+.logo img {
+  vertical-align: sub;
 }
 
 /* rigth - Nav */
 .right_nav {
-  float: right;
   text-transform: capitalize;
 }
 
@@ -124,13 +131,13 @@ nav > * {
 .right_nav .push_link {
   background-color: #ff0066;
   border-radius: 40px;
-  padding: 10px 20px;
+  padding: 0 20px;
 }
 
-.push_link a > span {
+.push_link a {
   color: #fff;
 }
 
-.push_link a:hover > span {
+.push_link a:hover span {
   color: #fff;
 }

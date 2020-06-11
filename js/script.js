@@ -1,26 +1,33 @@
 //myJavaScript
-$(document).ready(function () {
+$(document).ready( function() {
 
-//click event
-$(".with_scroll").on( "click", function() {
-  //quando io clicco su una voce del .menu.inline
-  //tolgo la classe visible a tutti i .menu.scroll
-  //passo la classe .visible al relativo .menu.scroll
-  //$(".menu.scroll").removeClass("visible");
-  $(".menu.scroll").removeClass("visible");
-  $(this).children(".menu.scroll").addClass("visible");
-  }
-)
+  //Click Event menu scroll
+  $(".with_scroll").click( function() {
+    $(this).siblings().children().removeClass("visible")
+    $(this).children().toggleClass("visible");
+  });
 
-//click event
-$(".with_scroll").on( "dblclick", function() {
-  //quando io duble-clicco su una voce del .menu.inline
-  //tolgo la classe visible a tutti .menu.scrol
-  //passo la classe .visible al relativo .menu.scroll
-  //$(".menu.scroll").removeClass("visible");
-  $(".menu.scroll").removeClass("visible");
-  }
-)
+  //mouse enter Event menu
+  $(".with_scroll").mouseenter( function() {
+    $(this).siblings().children().removeClass("visible")
+    $(this).children().addClass("visible");
+  });
+
+  //mouse leave Event menu
+  $(".with_scroll").mouseleave( function() {
+    $(".with_scroll").children().removeClass("visible")
+  });
+
+  //mouse enter Event lang
+  $(".lang").mouseenter( function () {
+    $(".with_scroll").siblings().children().removeClass("visible")
+    $(this).children().children("i").toggleClass("fa-chevron-up");
+  });
+
+  //mouse leave Event lang
+  $(".lang").mouseleave( function () {
+    $(this).children().children("i").toggleClass("fa-chevron-up");
+  });
 
 
 });
